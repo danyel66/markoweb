@@ -524,33 +524,33 @@ body {
 }
 
 .card__picture--1 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-photo.jpg");
-  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-photo.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-animalHusbandry.jpg"); /*new*/
+  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-animalHusbandry.jpg"); /*new*/
 }
 
 .card__picture--2 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-photo3.jpg");
-  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-photo3.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-cashCrop.jpg"); /*new*/
+  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-cashCrop.jpg");/*new*/
 }
 
 .card__picture--3 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-photo5.jpg");
-  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-photo5.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-foodCrop.jpg"); /*new*/
+  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-foodCrop.jpg"); /*new*/
 }
 
 .card__picture--4 {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-grazing.jpg");
-  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-grazing.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#5f83a3), to(#101d2c)), url("../images/marko-index-service.jpg"); /*new*/
+  background-image: linear-gradient(to right bottom, #5f83a3, #101d2c), url("../images/marko-index-service.jpg"); /*new*/
 }
 
 .card__heading {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: right;
   color: #ffffff;
   position: absolute;
-  top: 12rem;
+  top: 12.2rem;
   right: 2rem;
   width: 72%;
 }
@@ -589,6 +589,7 @@ body {
 
 .card__details p {
   font-size: 1.5rem;
+  /* margin-top: 0.25rem; */
   padding: 2rem;
 }
 
@@ -605,7 +606,9 @@ body {
 }
 
 .composition__photo {
+  height: 300px; /*new*/
   width: 55%;
+  object-fit: cover; 
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
   border-radius: 2px;
@@ -614,9 +617,24 @@ body {
   transition: all .3s;
 }
 
+@media (min-width: 600px) and (max-width: 900px ) { /*new*/
+  .composition__photo {
+    height: 200px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 600px ) { /*new*/
+  .composition__photo {
+    height: 120px;
+    width: 50%;
+  }
+}
+
 @media (max-width: 490px) {
   .composition__photo {
-    width: 33%;
+    height: 88px; /*new*/
+    width: 33%; /*new*/
   }
 }
 
@@ -932,8 +950,8 @@ body {
 
 .header {
   height: 95vh;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../images/marko-photo2.jpg");
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/marko-photo2.jpg");
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.5)), to(rgba(40, 180, 133, 0.5))), url("../images/marko-photo2.jpg"); /*new*/
+  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5)), url("../images/marko-photo2.jpg"); /*new*/
   background-position: top;
   background-size: cover;
   position: relative;
@@ -1146,7 +1164,7 @@ body {
 .background {
   position: fixed;
   visibility: hidden;
-  background: radial-gradient(#28b485, #55c57a);
+  background: radial-gradient(#2ab889, #4eda7d); /*new*/
   -webkit-clip-path: circle(30px at 90% 0%);
           clip-path: circle(30px at 90% 0%);
   width: 100%;
@@ -1251,7 +1269,7 @@ body {
 
 @media (max-width: 1200px) {
   .section-products {
-    margin: -10rem 0 0;
+    margin: -5rem 0 0;
     padding: 15rem 0 20rem;
   }
 }
@@ -1352,12 +1370,13 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   background: #f7f7f7;
+  padding-bottom: 0.625rem; /*new*/
 }
 
 .abt__header {
   position: relative;
-  background: -webkit-gradient(linear, right top, left bottom, from(#28b485), to(#55c57a));
-  background: linear-gradient(to left bottom, #28b485, #55c57a);
+  background: -webkit-gradient(linear, right top, left bottom, from(#2ab889), to(#4eda7d)); /*new*/
+  background: linear-gradient(to left bottom, #2ab889, #4eda7d); /*new*/
   width: inherit;
   height: 50vh;
 }
@@ -1452,7 +1471,7 @@ body {
 }
 
 .contact__main__text-box--main span {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 600px) {
@@ -1608,10 +1627,10 @@ body {
 .product__header {
   width: 100%;
   height: 65vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url("../images/marko-photo3.jpg");
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../images/marko-photo3.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.5)), to(rgba(40, 180, 133, 0.5))), url("../images/marko-photo3.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 133, 0.5)), url("../images/marko-photo3.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   position: relative;
   padding-bottom: 2rem;
 }
@@ -1620,7 +1639,7 @@ body {
   width: 30%;
   padding: 1.5rem;
   position: absolute;
-  top: 30%;
+  top: 30%; /*new*/
   left: 5%;
 }
 
@@ -1637,10 +1656,11 @@ body {
 }
 
 .product__heading {
+  margin-top: 1.5rem;
   text-transform: uppercase;
   font-family: 'Arial Narrow';
   color: #ffffff;
-  line-height: 10rem;
+  line-height: 5rem;
   font-size: 3rem;
 }
 
@@ -1661,7 +1681,7 @@ body {
 }
 
 .product__paragraph {
-  display: inline;
+  display: inline-block; /* new */
   color: #101d2c;
   font-size: 1.3rem;
   text-align: justify;
@@ -1718,7 +1738,7 @@ body {
 
 @media (max-width: 1200px) {
   .categories {
-    height: 65vh;
+    height: 75vh; /*new*/
     padding: .5rem;
   }
 }
@@ -1738,11 +1758,15 @@ body {
   height: inherit;
 }
 
+@media (max-width: 600px) { /*new*/
+  .categories__text-box {
+    height: 65vh;
+  }
+}
+
 .categories__text-box__heading {
   width: 100%;
   text-align: center;
-  height: 100px;
-  line-height: 100px;
 }
 
 @media (max-width: 900px) {
@@ -1762,17 +1786,15 @@ body {
 
 @media (max-width: 600px) {
   .categories__text-box__heading--cat {
-    font-size: 6rem;
+    font-size: 4rem; /*new*/
   }
 }
 
 .categories__text-box--main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (40%)[2];
-      grid-template-columns: repeat(2, 40%);
-  grid-auto-rows: -webkit-fit-content;
-  grid-auto-rows: fit-content;
+  -ms-grid-columns: (25%)[3];
+      grid-template-columns: repeat(3, 25%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1781,6 +1803,7 @@ body {
 
 @media (max-width: 490px) {
   .categories__text-box--main {
+    grid-auto-rows: 15rem;
     gap: 2;
     -ms-grid-columns: 90%;
         grid-template-columns: 90%;
@@ -1802,7 +1825,7 @@ body {
 
 .categories__text-box--main--1 img {
   width: 200px;
-  height: 50%;
+  height: 15rem;
   margin: 0 auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1812,14 +1835,14 @@ body {
 @media (max-width: 600px) {
   .categories__text-box--main--1 img {
     width: 150px;
-    height: 30%;
+    height: 10rem;
   }
 }
 
 @media (max-width: 490px) {
   .categories__text-box--main--1 img {
     width: 100px;
-    height: 30%;
+    height: 10rem;
   }
 }
 
@@ -1845,7 +1868,7 @@ body {
 
 .categories__text-box--main--2 img {
   width: 200px;
-  height: 50%;
+  height: 15rem;
   margin: 0 auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1855,14 +1878,14 @@ body {
 @media (max-width: 600px) {
   .categories__text-box--main--2 img {
     width: 150px;
-    height: 30%;
+    height: 10rem;
   }
 }
 
 @media (max-width: 490px) {
   .categories__text-box--main--2 img {
     width: 100px;
-    height: 30%;
+    height: 10rem;
   }
 }
 
@@ -1872,6 +1895,49 @@ body {
   display: block;
   font-size: 2.3rem;
 }
+
+.categories__text-box--main--3 {                  /*new*/
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .categories__text-box--main--3 {
+    padding: 0px;
+  }
+}
+
+.categories__text-box--main--3 img {
+  width: 200px;
+  height: 15rem;
+  margin: 0 auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .categories__text-box--main--3 img {
+    width: 150px;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .categories__text-box--main--3 img {
+    width: 100px;
+    height: 10rem;
+  }
+}
+
+.categories__text-box--main--3 h3 {
+  text-transform: uppercase;
+  color: #ccc;
+  display: block;
+  font-size: 2.3rem;
+}                                             /*new*/
 
 .product-type-1 {
   width: 90%;
@@ -1974,7 +2040,7 @@ body {
 }
 
 .product-visible .product-category {
-  width: 200%;
+  width: 300%; /*new*/
   height: 100%;
   position: relative;
   display: -webkit-box;
@@ -1985,13 +2051,19 @@ body {
 }
 
 .product-visible .product-category--1 {
-  width: 50%;
+  width: calc(100%/3); /*new*/
   height: 100%;
   padding: 1rem 0;
 }
 
 .product-visible .product-category--2 {
-  width: 50%;
+  width: calc(100%/3); /*new*/
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.product-visible .product-category--3 { /*new*/
+  width: calc(100%/3);
   height: 100%;
   padding: 1rem 0;
 }
@@ -2082,4 +2154,136 @@ body {
 form#signup_form {
     margin-top: -5rem;
 }
-/*# sourceMappingURL=main.css.map */
+
+
+
+
+/* bussiness page */
+.business {
+  background: #f7f7f7;
+}
+
+.business__hero {
+  width: 100%;
+  height: 60vh;
+  background: #55c57a;
+  background-image: url("../images/marko-photo8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 75%;
+}
+
+.business__hero--left {
+  width: 60%;
+  height: 100%;
+  background: rgba(85, 197, 122, 0.8);
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 100% 100%, 0 100%);
+}
+
+@media (max-width: 600px) {
+  .business__hero--left {
+    width: 85%;
+  }
+}
+
+.business__text-box {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 400px;
+}
+
+@media (max-width: 1200px) {
+  .business__text-box {
+    width: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .business__text-box {
+    left: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .business__text-box {
+    top: 70%;
+    width: 250px;
+  }
+}
+
+.business__text-box p {
+  font-size: 1.3rem;
+  width: 70%;
+  color: #f7f7f7;
+}
+
+.business__header {
+  text-transform: uppercase;
+  color: #101d2c;
+  font-size: 4.5rem;
+}
+
+.business__header--main {
+  display: block;
+  margin-bottom: -3rem;
+  letter-spacing: .4rem;
+}
+
+.business__header--sub {
+  font-size: 3rem;
+  letter-spacing: 1.5rem;
+}
+
+.business__content h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.business__main {
+  width: 100%;
+}
+
+.business__main--card {
+  width: 85%;
+  margin: 0 auto;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .business__main--card {
+    width: 100%;
+  }
+}
+
+.business__shape {
+  width: 15rem;
+  height: 15rem;
+  background: #101d2c;
+  /* background-image: url("../images/plant-icon.png");
+  background-size: cover; */
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem);
+}
+
+.business__shape img {
+  width:100%; 
+  padding: 1.5rem;
+}
+
+.business__text--header {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+

@@ -2,88 +2,120 @@
 {% load static %}
 {% block content %}
 {% include 'core/nav.html' %}
-    <main>
-        <section class="abt">
-            <div class="abt__header u-margin-bottom--big">
-                <div class="abt__header__text-box">
-                    <h1 class="heading-primary">
-                        <span class="heading-primary--sub">Our Business Venture</span>
-                    </h1>
+
+<section class="business">
+    <section class="business__hero u-margin-bottom--big">
+      <div class="business__hero--left">
+        <div class="business__text-box">
+            <h1 class="business__header">
+                <span class="business__header--main">Business</span>
+                <span class="business__header--sub">Venture</span>
+            </h1>
+       </div>
+      </div>
+    </section>
+
+    <section class="business__content">
+
+        <h2 class="heading-secondary u-margin-bottom--medium ">Our Business</h2>
+
+        <main class="business__main u-margin-bottom--big">
+            <div class="business__main--card">
+                <figure class="business__shape">
+                        <img src="{% static 'images/cow-icon.png' %}" alt="animal" style="width:100%">
+                </figure>
+
+                <div class="business__text">
+                    <h3 class="heading-tertiary u-margin-bottom--small">Marko Ventures Crop produce</h3>
+
+                    <p class="u-margin-bottom--small">
+                        Marko Agro Ventures is a high network organization involved seriously in the cultivation, harvesting, processing, storage, distribution and supply of a variety of food and cash crops that are found within Sub – Saharan Africa. 
+                    </p>
+
+                    <dl>
+                        <dt class="u-margin-bottom--small">
+                            <h4 class="business__text--header">CASH CROPS</h4>
+                            <dd class="u-margin-bottom--small">
+                                <p>Oil Palm: Oil palm is a  high sort after cash crop whose economic value can never be over emphasized because every part of the plant can  be / is used for something therefore making it all valuable. 
+                                At Marko Agro , With the facilities, state of art equipments and specialised human resources, we involve in the cultivation and processing of the palm fruits to get the best quality palm oil ( For consumption and industrial usage ) , kernel oil and cake from the kernel nuts in the most hygienic environment for our esteemed customers who we supply  nationwide with prospects of exporting our products in the foreseeable  future.</p> 
+                            </dd>
+                        </dt>
+
+                        <dt class="u-margin-bottom--small">
+                            <h4 class="business__text--header">FOOD CROPS</h4>
+                            <dd>
+                                <p>Rice : Rice is a staple food and also cash crops that every household and a good number of industries demand demand and consume regularly and in high quantity and volumes. Marko Agro Ventures is presently involved in the processing, packaging and supply of the highest quality premium rice grains, rich in fibre and bran. This is possible because we have top quality rice processing and packaging machinery that is capable of processing 100 metric tonnes or paddy rice par day.
+                                Also, with expanse acres of aerable and fertile soil conducive for large scale cultivation of rice at various locations across Nigeria, including; Uburu ( Ebonyi State) , Ogoja ( Cross River state ) , Yawuri ( Kebbi state ) , Makarfi ( Kaduna State) and Nasarawa ( Nasarawa state) , we are making final preparations to start up large scale rice cultivation across to help boast availability of the ever high demand crop. 
+                                </p> 
+                            </dd>
+                        </dt>
+                    </dl >
                 </div>
-            </div>
-            <div class="abt__content  u-margin-bottom--medium">
-                <div class="u-center-text u-margin-bottom--medium">
-                    <h2 class="heading-secondary">
-                        Crop
-                    </h2>
-               </div>
 
-               <p>
-                 Marko Agro Ventures is a high network organization involved seriously in the cultivation, harvesting, processing, storage, distribution and supply of a variety of food and cash crops that are found within Sub – Saharan Africa.
-               </p>
-               <p>
-                 CASH CROPS:
-                 </p>
-                 <p>
-                   Oil Palm: Oil palm is a  high sort after cash crop whose economic value can never be over emphasized because every part of the plant can  be / is used for something therefore making it all valuable.
-                   At Marko Agro , With the facilities, state of art equipments and specialised human resources, we involve in the cultivation and processing of the palm fruits to get the best quality palm oil ( For consumption and industrial usage ) , kernel oil and cake from the kernel nuts in the most hygienic environment for our esteemed customers who we supply  nationwide with prospects of exporting our products in the foreseeable  future.
-
-                 </p>
-               <p>
-                 FOOD CROPS:
-                 </p>
-                 <p>
-                   Rice : Rice is a staple food and also cash crops that every household and a good number of industries demand demand and consume regularly and in high quantity and volumes. Marko Agro Ventures is presently involved in the processing, packaging and supply of the highest quality premium rice grains, rich in fibre and bran. This is possible because we have top quality rice processing and packaging machinery that is capable of processing 100 metric tonnes or paddy rice par day.
-                   Also, with expanse acres of aerable and fertile soil conducive for large scale cultivation of rice at various locations across Nigeria, including; Uburu ( Ebonyi State) , Ogoja ( Cross River state ) , Yawuri ( Kebbi state ) , Makarfi ( Kaduna State) and Nasarawa ( Nasarawa state) , we are making final preparations to start up large scale rice cultivation across to help boast availability of the ever high demand crop.
-
-
-                 </p>
-            </div>
-            <div class="abt__content  u-margin-bottom--medium">
-                <div class="u-center-text u-margin-bottom--medium">
-                    <h2 class="heading-secondary">
-                        Animals
-                    </h2>
-               </div>
-
-               <p>
-                 Farm animals breeding  and rearing for various purposes is one stronghold for us at Marko Agro Ventures. This is simply because of the passion with which our animal care givers “ who are highly specialised in the service” tend to our animals with the purpose of encouraging regular growth and development of the vast variety and species of farm animals to meet up with the ever present and growing demand for such animals.
-
-               </p>
-               <p>
-                 Cattle breeding: Currently, we at Marko Agro have in our farm , high quality, disease resistant and high yielding beef cattle. This is primarily because of the demand and consumption rate of beef in the country and the world over.
-                 Our cattle are naturally bred, healthy fattened animals ready for consumption both for  subsistence and retail customers. We have cattle are ready for sales and supply anywhere within Nigeria.
-                 A new and welcome development in Nigeria, is the government's policy with regards to dairy products and production. Keying into this development, Marko Agro Ventures is making earnest preparations for stocking, breeding and rearing high yielding dairy cattle to enable us attain the level we hope to attain with regards to dairy products and production in Nigeria.
-               </p>
+               
             </div>
 
-            <div class="abt__content  u-margin-bottom--medium">
-                <div class="u-center-text u-margin-bottom--medium">
-                    <h2 class="heading-secondary">
-                        Consultancy
-                    </h2>
-               </div>
+            <div class="business__main--card">
+                <figure class="business__shape">
+                    <img src="{% static 'images/plant-icon.png' %}" alt="animal" style="width:100%">
+                </figure>
 
-               <p>
-                 Feel free to consult us on any issues, topics, aspects or fields of interest to you on the overall agricultural value chain. We have highly skilled and experienced specialists in each and every aspect of agriculture that are friendly and easy to communicate with.
-                 We would be glad to help you find and implement solutions to any problem, enquiries, direction or guidance you may need in practicing agriculture.
+                <div class="business__text">
+                    <h3 class="heading-tertiary u-margin-bottom--small">Marko Ventures Animal Husbandry </h3>
 
-                </p>
+                    <p class="u-margin-bottom--small">
+                        Farm animals breeding  and rearing for various purposes is one stronghold for us at Marko Agro Ventures. This is simply because of the passion with which our animal care givers “ who are highly specialised in the service” tend to our animals with the purpose of encouraging regular growth and development of the vast variety and species of farm animals to meet up with the ever present and growing demand for such animals. 
+                    </p>
+
+                    <dl>
+                        <dt class="u-margin-bottom--small">
+                            <h4 class="business__text--header">CATTLE BREEDING</h4>
+                            <dd class="u-margin-bottom--small">
+                                <p>Currently, we at Marko Agro have in our farm , high quality, disease resistant and high yielding beef cattle. This is primarily because of the demand and consumption rate of beef in the country and the world over. 
+                                Our cattle are naturally bred, healthy fattened animals ready for consumption both for  subsistence and retail customers. We have cattle are ready for sales and supply anywhere within Nigeria. 
+                                A new and welcome development in Nigeria, is the government's policy with regards to dairy products and production. Keying into this development, Marko Agro Ventures is making earnest preparations for stocking, breeding and rearing high yielding dairy cattle to enable us attain the level we hope to attain with regards to dairy products and production in Nigeria. </p> 
+                            </dd>
+                        </dt>
+                    </dl >
+                </div>
+               
             </div>
-            <div class="abt__content  u-margin-bottom--medium">
-                <div class="u-center-text u-margin-bottom--medium">
-                    <h2 class="heading-secondary">
-                        OUR OTHER AREAS OF INTEREST
-                    </h2>
-               </div>
 
-               <p style="text-align: center;">
-                 <span>Human capital development</span><br>
-                 <span>Agro chemicals</span>
-                </p>
+            <div class="business__main--card">
+                <figure class="business__shape">
+                    <img src="{% static 'images/tractor-icon.png' %}" alt="animal" >
+                </figure>
+
+                <div class="business__text">
+                    <h3 class="heading-tertiary u-margin-bottom--small">Marko Ventures services </h3>
+
+                    <p class="u-margin-bottom--small">
+                        As an Agro specialised venture, Marko Agro is a one stop shop for all agriculturally related consultancy services ranging from seeds, crop and soil selection for proper cultivation of desired crops; breeding, crossbreeding, rearing, supply, management of farm animals; sales , assembling, set up, servicing, maintenance and management of both locally 
+                        and foreign fabricated top quality farm equipments and machinery such as ; Palm oil milling machines, palm kernel cracker & oil extractor, combined rice parboilling & milling machines, cassava processors, tractors, harrows, varieties of crop harvesting equipments, milking machines, drones for spraying pesticides amongst others. 
+                        So feel free to consult us on any  topic, aspect or field of interest to you on the overall agricultural value chain. We are fully grounded with experienced, friendly specialists who are easy to communicate with.
+                        We would be glad to help you find solutions to any problems, enquiries , directions or guidance you may need as it pertains to agriculture. 
+                    </p>
+
+                    <dl>
+                        <dt class="u-margin-bottom--small">
+                            <h4 class="business__text--header">Our other areas of interest</h4>
+                            <dd class="u-margin-bottom--small">
+                                <p>As a way of building capacity and creating sustainable job opportunities for others particularly the residents and natives of our host communities (who make up a very large percentage of out current work force), Marko Agro Ventures is making earnest preparations to start organizing training  on the operation, management, 
+                                    light and comprehensive servicing of all the farm machines and equipments.  Our aim here is particularly to engage the youths in productive activities that would not only help make them financially self sufficient, contribute to the economy but will also assist in reducing or outright eliminating crime in  our  society. 
+                                </p> 
+                            </dd>
+                        </dt>
+                    </dl >
+                </div>
+               
             </div>
-        </section>
-    </main>
+
+        </main>
+       
+
+    </section>
+    
+</section>
     <footer class="footer">
         <p class="copyright">
             &copy; Copyright 2020 by Marko-Agro-Ventures.
