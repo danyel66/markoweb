@@ -8,7 +8,8 @@ from django.shortcuts import reverse
 
 CATEGORIES = (
     ('A', 'animal'),
-    ('C', 'crop')
+    ('C', 'crop'),
+    ('S', 'services')
 )
 
 

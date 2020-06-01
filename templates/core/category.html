@@ -39,7 +39,7 @@
                 </div>
 
                 <!-- new -->
-                <div class="categories__text-box--main--3" name="category"> 
+                <div class="categories__text-box--main--3" name="category">
                     <img src="{% static 'images/services-0.png' %}" alt="services">
                     <h3 class="u-margin-bottom--small">Services</h3>
                 </div>
@@ -59,100 +59,104 @@
             <div class="product-category--1">
 
                 <section class="product-visible__card-container">
-                  {% if items %}
-                  {% for item in items.crops %}
+                  {% for crop in crops %}
                         <figure class="product-visible__card">
-                            <a href="{{ item.get_absolute_url }}">
-                                <img src="{{ item.image.url }}" alt="image" class="product-visible__card--image">
-                                <h3 class="heading-tertiary product-visible__card--heading">{{ item.title }}</h3>
+                            <a href="{{ crop.get_absolute_url }}">
+                                <img src="{{ crop.image.url }}" alt="image" class="product-visible__card--image">
+                                <h3 class="heading-tertiary product-visible__card--heading">{{ crop.title }}</h3>
                             </a>
                         </figure>
                         {% endfor %}
-                        {% endif %}
                 </section>
 
-                <div class="pagination_container">
-                    {% if is_paginated %}
-                    <ul class="pagination">
-                      {% if crops.has_previous %}
-                        <li><a href="?page={{ crops.previous_page_number }}">«</a></li>
-                        {% endif %}
+                <!-- <div class="pagination_container">
+                  <ul class="pagination">
+                    {% if page_obj.has_previous %}
+                      <li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
+                      {% endif %}
 
-                        {% for num in crops.paginator.page_range %}
-                        {% if crops.number == num %}
+                      {% for num in page_obj.paginator.page_range %}
+                      {% if page_obj.number == num %}
                         <li><a href="?page={{ num }}">{{ num }}</a></li>
-                        {% elif num > crops.number|add:'-3' and num < crops.number|add:'3' %}
+                      {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
                         <li><a class="active" href="?page={{ num }}">{{ num }}</a></li>
                         {% endif %}
-                        {% endfor %}
-                        {% if items.crops.has_next %}
-                        <li><a href="?page={{ crops.next_page_number }}">»</a></li>
-                        {% endif %}
-                    </ul>
+                      {% endfor %}
+                    {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
                     {% endif %}
-                </div>
+                  </ul>
+                </div> -->
             </div>
 
             <div class="product-category--2">
                     <section class="product-visible__card-container">
-                      {% if items %}
-                      {% for item in items.animals %}
+
+                      {% for animal in animals %}
                         <figure class="product-visible__card">
-                            <a href="{{ item.get_absolute_url }}">
-                                <img src="{{ item.image.url }}" alt="image" class="product-visible__card--image">
-                                <h3 class="heading-tertiary product-visible__card--heading">{{ item.title }}</h3>
+                            <a href="{{ animal.get_absolute_url }}">
+                                <img src="{{ animal.image.url }}" alt="image" class="product-visible__card--image">
+                                <h3 class="heading-tertiary product-visible__card--heading">{{ animal.title }}</h3>
                             </a>
                         </figure>
                         {% endfor %}
-                        {% endif %}
                     </section>
 
-                    <div class="pagination_container">
-                        {% if is_paginated %}
+                    <!-- <div class="pagination_container">
                         <ul class="pagination">
-                          {% if animals.has_previous %}
-                            <li><a href="?page={{ animals.previous_page_number }}">«</a></li>
+                          {% if page_obj.has_previous %}
+                            <li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
                             {% endif %}
 
-                            {% for num in animals.paginator.page_range %}
-                            {% if animals.number == num %}
-                            <li><a href="?page={{ num }}">{{ num }}</a></li>
-                            {% elif num > animals.number|add:'-3' and num < animals.number|add:'3' %}
-                            <li><a class="active" href="?page={{ num }}">{{ num }}</a></li>
-                            {% endif %}
+                            {% for num in page_obj.paginator.page_range %}
+                            {% if page_obj.number == num %}
+                              <li><a href="?page={{ num }}">{{ num }}</a></li>
+                            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                              <li><a class="active" href="?page={{ num }}">{{ num }}</a></li>
+                              {% endif %}
                             {% endfor %}
-                            {% if animals.has_next %}
-                            <li><a href="?page={{ animals.next_page_number }}">»</a></li>
-                            {% endif %}
+                          {% if page_obj.has_next %}
+                          <li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
+                          {% endif %}
                         </ul>
-                        {% endif %}
-                    </div>      
+                    </div> -->
             </div>
 
             <div class="product-category--3">
                 <section class="product-visible__card-container">
                     <!-- Daniel add your code here -->
+                    {% for service in services %}
+                      <figure class="product-visible__card">
+                          <a href="{{ service.get_absolute_url }}">
+                              <img src="{{ service.image.url }}" alt="image" class="product-visible__card--image">
+                              <h3 class="heading-tertiary product-visible__card--heading">{{ service.title }}</h3>
+                          </a>
+                      </figure>
+                      {% endfor %}
                 </section>
 
-                <div class="pagination_container">
+                <!-- <div class="pagination_container"> -->
                     <!-- Daniel add your code here -->
-                </div>      
-            </div>
+                      <!-- <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                          <li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
+                          {% endif %}
+
+                          {% for num in page_obj.paginator.page_range %}
+                          {% if page_obj.number == num %}
+                            <li><a href="?page={{ num }}">{{ num }}</a></li>
+                          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <li><a class="active" href="?page={{ num }}">{{ num }}</a></li>
+                            {% endif %}
+                          {% endfor %}
+                        {% if page_obj.has_next %}
+                        <li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
+                        {% endif %}
+                      </ul>
+                    </div> -->
+                </div>
 
         </div>
-        <!-- pagination -->
-        <!-- <div class="pagination">
-          <a href="#">&laquo;</a>
-          <a href="#">1</a>
-          <a class="active" href="#">2</a>
-          <a href="#">3</a>
-          <a href="#">4</a>
-          <a href="#">5</a>
-          <a href="#">6</a>
-          <a href="#">&raquo;</a>
-        </div> -->
-   </div>
-
 </main>
 {% include 'core/footer.html' %}
 {% endblock content %}
