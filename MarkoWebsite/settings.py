@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'jh8*ld%e#r+(gr5qv8ykq=^!x&-#rhmt$gc(vywxa*ca)=!^i0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -44,9 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'core',
     'cloudinary',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
@@ -81,20 +78,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'MarkoWebsite.wsgi.application'
 
-
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
-)
-
-ACCOUNT_FORMS = {
-    'login': 'core.forms.CustomLoginForm',
-    'signup': 'core.forms.CustomSignupForm',
-    'reset_password': 'core.forms.CustomResetPasswordForm',
-    'reset_password_from_key': 'core.forms.CustomResetPasswordKeyForm',
-    'change_password': 'core.forms.CustomChangePasswordForm',
-
-}
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -161,29 +144,7 @@ STATICFILES_DIRS = (
 #  Add configuration for static files storage using whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-#
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'danielsung247@gmail.com'
-EMAIL_HOST_PASSWORD = 'danielsung2478'
-EMAIL_PORT = 587
-
-
-LOGIN_REDIRECT_URL = '/'
-
-LOGOUT_REDIRECT_URL = 'account_login'
 
 SITE_ID = 1
-
-# ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-
-# ACCOUNT_AUTHENTICATION_LOGIN_REDIRECTS = True
-
-# ACCOUNT_AUTHENTICATION_METHOD = 'username'
-#
-ACCOUNT_EMAIL_REQUIRED = True
 
 django_heroku.settings(locals())

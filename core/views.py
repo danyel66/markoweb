@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, ListView
 from .models import Item
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 app_name = 'core'
@@ -42,7 +41,7 @@ def catview(request):
 
     animals = Item.objects.all().filter(category='A')
     crops = Item.objects.all().filter(category='C')
-    services = Item.objects.all().filter(category='S').order_by('-id')
+    services = Item.objects.all().filter(category='S')
     # paginator = Paginator(services, 1)
     #
     # page = request.GET.get('page')
@@ -63,7 +62,7 @@ def catview(request):
 
 
 # view for single product page
-class ItemDetailView(LoginRequiredMixin, DetailView):
+class ItemDetailView(DetailView):
     model = Item
     template_name = 'core/product.html'
 
